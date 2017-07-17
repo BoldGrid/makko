@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------
 # Variables
 ------------------------------------------------------------------------*/
-/* Custom */
 $rgba_1 : rgba($palette-primary_3, 0.75);
-$grad_1 : linear-gradient(to bottom, $palette-primary_4, $palette-primary_5);
 $rgba_2 : rgba(0,0,0,.60);
+
+$grad_1 : linear-gradient(to bottom, $palette-primary_4, $palette-primary_5);
 
 /*------------------------------------------------------------------------
 # Palettes
@@ -16,70 +16,24 @@ $rgba_2 : rgba(0,0,0,.60);
 	/*-----------------------------------------------
 	## 1
 	-----------------------------------------------*/
-	.widget .table-striped > tbody > tr:nth-child(2n+1) > td  {
-		background: $palette-primary_1;
-		border: 1px solid $palette-primary_1;
-		color: $text-contrast-palette-primary_1;
-	}
-	.button-secondary {
-		background: $palette-primary_2;
-		border: 1px solid $palette-primary_2;
-		color: $text-contrast-palette-primary_1;
-	}
-	.button-primary,
-	input[type="submit"] {
-		background: $palette-primary_2;
-		border: 1px solid $palette-primary_2;
-		color: $text-contrast-palette-primary_2;
-	}
-	.button-secondary:hover,
-	.button-secondary:active {
-		background: none;
-		border: 1px solid $palette-primary_1;
-		color: $palette-primary_1;
-	}
-
-	/*h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	caption {
-		color: $palette-primary_1;
-	}*/
-
-	.title-main {
-		border-bottom: 1px solid $palette-primary_1;
-		border-top: 1px solid $palette-primary_1;
-		color: $palette-primary_1;
-	}
-	/*	hr {
-		background: $palette-primary_1;
-	}*/
-	.mod-blockquote {
-		border-left: 7px solid $palette-primary_1;
-	}
-	.mod-icon-circle i {
-		border: 2px solid $palette-primary_1;
-		color: $palette-primary_1;
-	}
-	.mod-divider {
-		border-top: 1px solid $text-contrast-palette-primary_3;
-	}
-	/*.entry-title:before {
-		border-top: 1px solid $palette-primary_1;
-	}*/
-	
+	a,
+	caption,
+	a.url,
+	.entry-footer .cat-links > a,
+	.entry-footer .tags-links > a,
+	.site-footer a,
+	.entry-title a,
+	.boldgrid-section .fa,
+	.link-secondary,
 	#footer-center-menu .current-menu-item a {
 		color: $palette-primary_1;
 	}
-
-	/* Custom */
-	.bg-img-shadow-bottom-left {
-	    box-shadow: -5px 5px 0 0 $palette-primary_1;
-	}
-	/* Custom #2 */
+	.panel-body,
+	.panel-footer,
+	.sidebar,
+	#wp-calendar tbody .pad {
+		background: $palette-primary_1;
+	}	
 	.panel-heading,
 	.media-heading,
 	.comment-meta a,
@@ -91,32 +45,51 @@ $rgba_2 : rgba(0,0,0,.60);
 		background: $palette-primary_1;
 		color: $text-contrast-palette-primary_1;
 	}
-	a,
-	caption,
-	a.url,
-	.entry-footer .cat-links > a,
-	.entry-footer .tags-links > a {
-		color: $palette-primary_1;
-	}
-	.panel-body,
-	.panel-footer,
-	.sidebar,
-	#wp-calendar tbody .pad {
-		background: $palette-primary_1;
-	}
 	.comment-reply-title,
 	.comment-respond a {
 		color: $text-contrast-palette-primary_1;
 	}
+	.button-secondary {
+		background: $palette-primary_1;
+		border: 1px solid $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
+	}
+	.button-secondary:hover,
+	.button-secondary:active {
+		background: none;
+		border: 1px solid $palette-primary_1;
+		color: $palette-primary_1;
+	}
+	.widget .table-striped > tbody > tr:nth-child(2n+1) > td {
+		background: $palette-primary_1;
+		border: 1px solid $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
+	}	
+	/*.title-main {
+		border-bottom: 1px solid $palette-primary_1;
+		border-top: 1px solid $palette-primary_1;
+		color: $palette-primary_1;
+	}*/
 	.post {
 		border-bottom: 1px solid $palette-primary_1;
+	}	
+	.mod-blockquote {
+		border-left: 7px solid $palette-primary_1;
 	}
 
 	/*-----------------------------------------------
 	## 2
 	-----------------------------------------------*/
-	a,
-	.link-primary,
+	.media-heading a.url,
+	.sidebar .nav > li > a,
+	.sidebar a,
+	.sidebar .nav > li::before,
+	#wp-calendar caption,
+	#wp-calendar tbody,
+	#wp-calendar tfoot #next,
+	#wp-calendar tfoot #prev,
+	.table > thead > tr > th,
+	.widget ul#recentcomments > li::before,
 	.link-secondary,
 	.heading-alt,
 	#secondary-menu a[href]:hover,
@@ -128,19 +101,38 @@ $rgba_2 : rgba(0,0,0,.60);
 	#menu-social li a:focus {
 		color: $palette-primary_1;
 	}
+	#secondary-menu,
+	#tertiary-menu {
+		.current-menu-item a {
+		color: $palette-primary_2;
+		}
+	}
+	.button-primary {
+		background: $palette-primary_2;
+		border: 1px solid $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}
+	hr { 
+		border-top: 1px solid $palette-primary_2;
+	}
+	hr:after { 
+		border: 1px solid $palette-primary_2;
+	}
+	.p-button-primary a {
+		color: $text-contrast-palette-primary_2;
+	}
+	code {
+		background-color: $palette-primary_1;
+		color: $palette-primary_2;
+	}
+	#wp-calendar #today {
+		background: $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}	
 	.navbar-default .navbar-toggle:hover .icon-bar,
 	.navbar-default .navbar-toggle:focus .icon-bar
 	.navbar-default .navbar-toggle .icon-bar {
 		background-color: $palette-primary_2;
-	}
-	.form-submit .submit {
-		background: $palette-primary_1;
-		color: $text-contrast-palette-primary_2;
-	}
-	.form-submit .submit:hover,
-	.form-submit .submit:focus {
-		background: $palette-primary_2;
-		color: $text-contrast-palette-primary_2;
 	}
 
 	/* xs */
@@ -160,9 +152,8 @@ $rgba_2 : rgba(0,0,0,.60);
 	.navbar-default .navbar-nav > .open > a,
 	.navbar-default .navbar-nav > .open > a:hover,
 	.navbar-default .navbar-nav > .open > a:focus,
-	/*.navbar-default .navbar-nav > .current-menu-parent > a,*/
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus  {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
 		border-bottom: 4px solid transparent;
 		background: $palette-primary_2;
 		color: $text-contrast-palette-primary_2;
@@ -176,131 +167,19 @@ $rgba_2 : rgba(0,0,0,.60);
 		}
 	}
 
-	/* Custom */
-	hr { 
-		border-top: 1px solid $palette-primary_2;
-	}
-	hr:after { 
-		border: 1px solid $palette-primary_2;
-	}
-	.btn,
-	.btn:hover,
-	.btn:focus {
-		background: $palette-primary_2;
-	}
-	.p-button-primary a {
-	    color: $text-contrast-palette-primary_2;
-	}
-	.site-footer a,
-	.entry-title a  {
-		color: $palette-primary_1;
-	}
-
-	/* #menu-social li a {
-		color: $palette-primary_2;
-	} */
-	.boldgrid-section .fa {
-		color: $palette-primary_1;
-	}
-
-	/* Custom #2 */
-	.media-heading a.url,
-	/*#tertiary-menu a[href]:hover,*/
-	.sidebar .nav > li > a,
-	.sidebar a,
-	.sidebar .nav > li::before,
-	#wp-calendar caption,
-	#wp-calendar tbody,
-	#wp-calendar tfoot #next,
-	#wp-calendar tfoot #prev,
-	.table > thead > tr > th,
-	.widget ul#recentcomments > li::before {
-		color: $palette-primary_2;
-	}
-	#secondary-menu,
-	#tertiary-menu {
-		.current-menu-item a {
-		color: $palette-primary_2;
-		}
-	}
-	code {
-		background-color: $palette-primary_1;
-		color: $palette-primary_2;
-	}
-	.entry-footer a {
-		color: $text-contrast-palette-primary_3;
-	}
-	aside.sidebar h2.widget-title {
-		border-bottom: 1px solid $palette-primary_2;
-		color: $palette-primary_5;
-	}
-	.site-footer {
-		background: $palette-primary_3;
-		color: $text-contrast-palette-primary_3;
-	}
-
 	/*-----------------------------------------------
 	## 3
 	-----------------------------------------------*/
-	.palette-primary.disabled-footer .site-footer/*,
-	.entry-title a*/ {
-		background-color: $palette-primary_3;
-	}
-	.mod-divider {
-		i, a {
-			background: $palette-primary_3;
-		}
-	}
-	/*.site-title a,*/
+	.entry-footer a,
+	.site-footer p,
+	.attribution-theme-mods,
+	.navbar-default .dropdown-menu > li > a,
+	#wp-calendar tbody td a,
+	.nav-next a,
+	.nav-previous a,
 	#secondary-menu a,
 	#tertiary-menu a,
 	#menu-social a {
-		color: $text-contrast-palette-primary_3;
-	}
-
-	/* Nav Toggle */
-	.navbar-default .navbar-toggle {
-		border-color: $palette-primary_3;
-	}
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus {
-		background-color: $palette-primary_3;
-	}
-	.widget-area {
-		border: 1px solid $text-contrast-palette-primary_3;
-	}
-
-	/* Custom */
-	.entry-footer {
-		background: $palette-primary_3;
-	}
-	.site-footer p,
-	.attribution-theme-mods {
-		color: $text-contrast-palette-primary_3;
-	}
-	.site-header { 
-		background: $rgba_1;
-		border-bottom: 1px solid $text-contrast-palette-primary_3;
-	}
-	header.smaller {
-		background: $palette-primary_3;
-	}
-
-	/* Custom #2 */
-	.nav-next,
-	.nav-previous {
-		background-color: $palette-primary_3; 	
-		border: 1px solid $palette-primary_2; 	
-	}
-	#wp-calendar tbody td { 
-		background: $palette-primary_3;
-		border: 1px solid $palette-primary_1;
-		color: $text-contrast-palette-primary_3;
-	}
-	.navbar-default .dropdown-menu > li > a,
-	#wp-calendar tbody td a,	
-	.nav-next a,
-	.nav-previous a {	
 		color: $text-contrast-palette-primary_3;
 	}
 	.navbar-default .navbar-nav > .active > a,
@@ -313,8 +192,37 @@ $rgba_2 : rgba(0,0,0,.60);
 	.comment-meta a:hover,
 	.comment-meta a:focus,
 	#menu-social li a {
-		color: $palette-primary_3; 	
+		color: $palette-primary_3;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: $palette-primary_3;
+	}
+	.site-footer {
+		background: $palette-primary_3;
+		color: $text-contrast-palette-primary_3;
+	}
+	.site-header {
+		background: $rgba_1;
+		border-bottom: 1px solid $text-contrast-palette-primary_3;
+	}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus,
+	.entry-footer,
+	header.smaller,
+	.palette-primary.disabled-footer .site-footer {
+		background: $palette-primary_3;
+	}
+	.nav-next,
+	.nav-previous {
+		background-color: $palette-primary_3;
+		border: 1px solid $palette-primary_2;
+	}
+	#wp-calendar tbody td {
+		background: $palette-primary_3;
+		border: 1px solid $palette-primary_1;
+		color: $text-contrast-palette-primary_3;
 	}	
+
 	/* sm */
 		@media (min-width: 768px) {
 			/* Dropdown Child Default */
@@ -324,9 +232,8 @@ $rgba_2 : rgba(0,0,0,.60);
 	}
 
 	/*-----------------------------------------------
-	## 4 #777575 (Gray)
+	## 4
 	-----------------------------------------------*/
-	/* Custom #2 */
 	.navbar-default .navbar-nav > li > a:focus,
 	.sidebar .nav > li > a:focus, 
 	.sidebar .nav > li > a:hover,
@@ -338,64 +245,64 @@ $rgba_2 : rgba(0,0,0,.60);
 	.tagcloud a:focus {
 		color: $palette-primary_4;
 	}
-	.nav-next:hover,
-	.nav-previous:hover {
-		background: $palette-primary_4;
-	}
 	.nav-next a:hover,
 	.nav-next a:focus,
 	.nav-previous a:hover,
 	.nav-previous a:focus {
+		background: $palette-primary_4;
 		color: $text-contrast-palette-primary_4;
+
 	}
 	blockquote {
 		border-left: 5px solid $palette-primary_4;
 	}
-	td, th {
-	    border-bottom: 0.1rem solid $palette-primary_4;
+	td,
+	th {
+		border-bottom: 0.1rem solid $palette-primary_4;
 	}
 	pre {
-	    color: $text-contrast-palette-primary_4;
-	    background-color: $palette-primary_4;
-	    border: 1px solid $palette-primary_3;
-	}
-	.navbar-default .navbar-nav > .current-menu-parent > a {
+		background-color: $palette-primary_4;
+		border: 1px solid $palette-primary_3;
 		color: $text-contrast-palette-primary_4;
-	    background: $palette-primary_4;
 	}
-	.button-primary:hover,
-	.button-primary:active,
-	input[type="submit"]:hover,
-	input[type="submit"]:focus  {
+	.navbar-default .navbar-nav > .current-menu-parent > a,
+	#wp-calendar tbody td:hover {
 		background: $palette-primary_4;
-		border: 1px solid $palette-primary_4;
 		color: $text-contrast-palette-primary_4;
 	}
-	#wp-calendar tbody td:hover { 
-		background: $palette-primary_4; 
-		color: $text-contrast-palette-primary_4; 
-	}
-	#wp-calendar #today {
-	    background: $palette-primary_2;
-	    color: $text-contrast-palette-primary_2;
-	}
-
-	/* xs */
 	.navbar-default .navbar-nav > .dropdown.active.open > a {
 		color: $text-contrast-palette-primary_4;
 	}
+
 	/*-----------------------------------------------
-	## 5 #01342f (Green)
+	## 5
 	-----------------------------------------------*/
+	aside.sidebar h2.widget-title {
+		border-bottom: 1px solid $palette-primary_2;
+		color: $palette-primary_5;
+	}
+	.boldgrid-gradient-bg-1 {
+		background-image: $grad_1;
+		color: $text-contrast-palette-primary_5;
+	}	
 
 	/*-----------------------------------------------
 	## Neutral
 	-----------------------------------------------*/
-	/* Custom */
 	.bg-img-border-thin {
 		border: 1px solid $palette-primary-neutral-color;
 	}
-
+	.gallery-icon.landscape {
+		border-top: 3px solid $palette-primary-neutral-color;
+		border-bottom: 3px solid $palette-primary-neutral-color;
+	}
+	.navbar-default .navbar-nav > li > a,
+	.navbar-default .navbar-text,
+	.call-to-action h4,
+	.site-title a,
+	.site-description {	
+		color: $palette-primary-neutral-color;
+	}
 	.navbar-default .navbar-nav {
 		> {
 			.current-menu-parent > a {
@@ -438,62 +345,4 @@ $rgba_2 : rgba(0,0,0,.60);
 			}
 		}
 	}
-
-	.gallery-icon.landscape {
-	    border-top: 3px solid $palette-primary-neutral-color;
-	    border-bottom: 3px solid $palette-primary-neutral-color;
-	}
-
-	/* Custom #2 */
-	.navbar-default .navbar-nav > li > a,
-	.navbar-default .navbar-text,
-	.call-to-action h4,
-	.site-title a,
-	.site-description {	
-		color: $palette-primary-neutral-color;
-	}
-	.navbar-default .navbar-toggle .icon-bar {
-		background: $text-contrast-palette-primary-neutral-color;
-	}
-
-	select#cat {
-			color: #333333 !important;
-	}
-
-	/*-----------------------------------------------
-	# Et Cetera
-	-----------------------------------------------*/
-	.woocommerce #respond input#submit,
-	.woocommerce a.button,
-	.woocommerce button.button,
-	.woocommerce input.button,
-	.woocommerce p.buttons a.button {
-		background-color: #a46497;
-		color: #fff;
-	}
-	.woocommerce p.buttons a.button:hover {
-		background-color: #dad8da;
-		color: #515151;
-	}
-
-	/* Custom */
-	.boldgrid-section h3 {
-		text-shadow: 5px 4px 6px $rgba_2;
-	}
-	.call-to-action h2 {
-		color: #fff;
-		text-shadow: 5px 4px 6px $rgba_2;
-	}
-	.boldgrid-gradient-bg-1 {
-		background-image: $grad_1;
-		color: $text-contrast-palette-primary_5;
-	}
-}
-body.palette-primary {
-		color: $text-contrast-palette-primary_4;
-	    background: $palette-primary_4;
-	}
-.palette-primary.mce-content-body {
-	background: $palette-primary-neutral-color;
-	color: $text-contrast-palette-primary-neutral-color;
 }

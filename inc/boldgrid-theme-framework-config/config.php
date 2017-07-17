@@ -15,34 +15,27 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['boldgrid-parent-theme'] = true;
 	// Specify the parent theme's name.
 	$boldgrid_framework_configs['parent-theme-name'] = 'prime';	
-	// Select the header template to use.
-	$boldgrid_framework_configs['template']['header'] = 'generic';
 
 	// Custom Configs
 	//* Select the Sticky Nav to use.
 	$boldgrid_framework_configs['scripts']['boldgrid-sticky-nav'] = true;
-	//* Select the footer template to use.
-	$boldgrid_framework_configs['template']['footer'] = 'generic'; // changed to 'generic'
+
 	//* Disable navbar search form
 	$boldgrid_framework_configs['template']['navbar-search-form'] = false;
 
-	// Assign menus, widgets, and actions to locations in generic header and footer template.
 	//* Assign Locations for Generic Header.
 	$boldgrid_framework_configs['template']['locations']['header'] = array(
 		'6' => array( '[action]boldgrid_site_identity' ),
 		'7' => array( '[action]boldgrid_primary_navigation' ),
 		'8' => array( '[menu]secondary', '[menu]tertiary' ),
-		//'9' => array( '[menu]social' ),
 		'10' => array( '[widget]boldgrid-widget-2' ),
 	);
 
 	//* Assign Locations for Generic Footer.
 	$boldgrid_framework_configs['template']['locations']['footer'] = array(
-		// '1' => array( '[widget]boldgrid-widget-3' ),
 		'5' => array( '[menu]footer_center' ),
 		'9' => array( '[widget]boldgrid-widget-3','[action]boldgrid_display_attribution_links' ),
 		'10' => array( '[menu]social' ),
-		
 	);
 
 	/**
@@ -112,32 +105,6 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	//* Social Media Icons.
 	$boldgrid_framework_configs['social-icons']['type'] = 'icon';
 	$boldgrid_framework_configs['social-icons']['size'] = '4x';
-	$boldgrid_framework_configs['menu']['default-menus']['social']['items'] = array(
-		array (
-			'menu-item-title' =>  __( 'Pinterest' ),
-			'menu-item-classes' => 'pinterest',
-			'menu-item-url' => '//pinterest.com',
-			'menu-item-status' => 'publish'
-		),
-		array (
-			'menu-item-title' =>  __( 'Instagram' ),
-			'menu-item-classes' => 'instagram',
-			'menu-item-url' => '//instagr.am',
-			'menu-item-status' => 'publish',
-		),
-		array (
-			'menu-item-title' =>  __( 'Flickr' ),
-			'menu-item-classes' => 'flickr',
-			'menu-item-url' => '//flickr.com',
-			'menu-item-status' => 'publish'
-		),
-		array (
-			'menu-item-title' =>  __( 'Dribbble' ),
-			'menu-item-classes' => 'dribbble',
-			'menu-item-url' => '//dribbble.com',
-			'menu-item-status' => 'publish',
-		),
-	);
 
 	// Text Contrast Colors.
 	$boldgrid_framework_configs['customizer-options']['colors']['light_text'] = '#ffffff';
@@ -156,7 +123,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['template']['tagline-classes'] = 'h5 alt-font';
 
 	//* Typography Navigation.
-	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['navigation_font_family'] = 'hind';
+	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['navigation_font_family'] = 'Hind';
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['navigation_font_size'] = 12;
 	$boldgrid_framework_configs['customizer-options']['typography']['defaults']['navigation_text_transform'] = 'uppercase';
 
@@ -187,7 +154,7 @@ function boldgrid_theme_framework_config( $boldgrid_framework_configs ) {
 	$boldgrid_framework_configs['menu']['locations']['secondary'] = "Secondary Menu, Above Header";
 	$boldgrid_framework_configs['menu']['locations']['tertiary'] = "Top Right, Above Header";
 	$boldgrid_framework_configs['menu']['locations']['social'] = "Top of Footer";
-	$boldgrid_framework_configs['menu']['footer_menus'][] = 'social';
+	$boldgrid_framework_configs['menu']['footer_menus'][] = 'Social';
 
 	//* Set the header's container class.
 	$boldgrid_framework_configs['template']['pages']['global']['header'] = 'container-fluid';
