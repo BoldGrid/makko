@@ -2,260 +2,180 @@
 # Variables
 ------------------------------------------------------------------------*/
 $rgba_1 : rgba($palette-primary_3, 0.75);
-$rgba_2 : rgba(0,0,0,.60);
-
+$lighten1: lighten($palette-primary_1, 5%);
+$lighten2: lighten($palette-primary_2, 5%);
 $grad_1 : linear-gradient(to bottom, $palette-primary_4, $palette-primary_5);
 
 /*------------------------------------------------------------------------
 # Palettes
 ------------------------------------------------------------------------*/
 .palette-primary {
-	background: $palette-primary_4;
-	color: $text-contrast-palette-primary_4;
+	background: $palette-primary-neutral-color;
+	color: $text-contrast-palette-primary-neutral-color;
 
 	/*-----------------------------------------------
 	## 1
 	-----------------------------------------------*/
-	a,
-	caption,
-	a.url,
-	.entry-footer .cat-links > a,
-	.entry-footer .tags-links > a,
-	.site-footer a,
-	.entry-title a,
-	.boldgrid-section .fa,
-	.link-secondary,
-	#footer-center-menu .current-menu-item a {
-		color: $palette-primary_1;
-	}
-	.panel-body,
-	.panel-footer,
-	.sidebar,
-	#wp-calendar tbody .pad {
-		background: $palette-primary_1;
-	}	
-	.panel-heading,
-	.media-heading,
-	.comment-meta a,
-	.widget ul#recentcomments > li,
-	.comments,
-	.comments-area .comment-content p,
-	.comments-title,
-	.logged-in-as a {
-		background: $palette-primary_1;
-		color: $text-contrast-palette-primary_1;
-	}
-	.comment-reply-title,
-	.comment-respond a {
-		color: $text-contrast-palette-primary_1;
-	}
-	.button-secondary {
-		background: $palette-primary_1;
-		border: 1px solid $palette-primary_1;
-		color: $text-contrast-palette-primary_1;
-	}
-	.button-secondary:hover,
-	.button-secondary:active {
-		background: none;
-		border: 1px solid $palette-primary_1;
-		color: $palette-primary_1;
-	}
 	.widget .table-striped > tbody > tr:nth-child(2n+1) > td {
 		background: $palette-primary_1;
 		border: 1px solid $palette-primary_1;
 		color: $text-contrast-palette-primary_1;
-	}	
-	/*.title-main {
-		border-bottom: 1px solid $palette-primary_1;
+	} 
+	hr {
 		border-top: 1px solid $palette-primary_1;
-		color: $palette-primary_1;
-	}*/
-	.post {
-		border-bottom: 1px solid $palette-primary_1;
-	}	
-	.mod-blockquote {
-		border-left: 7px solid $palette-primary_1;
+	}
+	hr:after {
+		border: 1px solid $palette-primary_1;
+	}
+	code {
+		background-color: $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
 	}
 
 	/*-----------------------------------------------
 	## 2
 	-----------------------------------------------*/
-	.media-heading a.url,
-	.sidebar .nav > li > a,
+	a,
+	caption,
+	a.url,
+	.site-footer a,
+	.entry-title a,
+	.link-secondary,
+	#menu-social li a,
+	.entry-footer .cat-links > a,
+	.entry-footer .tags-links > a,
+	#footer-center-menu .current-menu-item a {
+		color: $palette-primary_2;
+	}
+	#wp-calendar tbody .pad {
+		background: $palette-primary_2;
+	}
+	.nav-next a,
+	.nav-previous a {
+		color: $text-contrast-palette-primary_2;
+	}
+	.nav > li > a:focus,
+	.nav > li > a:hover {
+		background-color: $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}
+	.nav-next,
+	.nav-previous {
+		background-color: $palette-primary_2;
+		border: 1px solid $palette-primary_2;
+	}
+	#wp-calendar #today
+	.nav-next a:hover,
+	.nav-next a:focus,
+	.nav-previous a:hover,
+	.nav-previous a:focus {
+		background: $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}
+	#menu-social li a:hover,
+	#menu-social li a:focus {
+		color: $lighten2;
+	}
+	#secondary-menu,
+	#tertiary-menu,
+	.heading-alt,
+	.link-secondary,
 	.sidebar a,
+	.sidebar .nav > li > a,
 	.sidebar .nav > li::before,
+	.current-menu-item a,
+	.media-heading a.url,
 	#wp-calendar caption,
 	#wp-calendar tbody,
 	#wp-calendar tfoot #next,
 	#wp-calendar tfoot #prev,
 	.table > thead > tr > th,
-	.widget ul#recentcomments > li::before,
-	.link-secondary,
-	.heading-alt,
 	#secondary-menu a[href]:hover,
 	#tertiary-menu a[href]:hover,
 	.palette-primary.disabled-footer .site-footer a {
 		color: $palette-primary_2;
 	}
-	#menu-social li a:hover,
-	#menu-social li a:focus {
-		color: $palette-primary_1;
-	}
-	#secondary-menu,
-	#tertiary-menu {
-		.current-menu-item a {
-		color: $palette-primary_2;
-		}
-	}
-	.button-primary {
-		background: $palette-primary_2;
-		border: 1px solid $palette-primary_2;
-		color: $text-contrast-palette-primary_2;
-	}
-	hr { 
-		border-top: 1px solid $palette-primary_2;
-	}
-	hr:after { 
-		border: 1px solid $palette-primary_2;
-	}
-	.p-button-primary a {
-		color: $text-contrast-palette-primary_2;
-	}
-	code {
-		background-color: $palette-primary_1;
+	.sidebar .nav > li > a:focus,
+	.sidebar .nav > li > a:hover {
+		background-color: transparent;
 		color: $palette-primary_2;
 	}
-	#wp-calendar #today {
-		background: $palette-primary_2;
-		color: $text-contrast-palette-primary_2;
-	}	
-	.navbar-default .navbar-toggle:hover .icon-bar,
-	.navbar-default .navbar-toggle:focus .icon-bar
-	.navbar-default .navbar-toggle .icon-bar {
-		background-color: $palette-primary_2;
+	blockquote {
+		border-left: 5px solid $palette-primary_2;
 	}
-
-	/* xs */
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-		color: $text-contrast-palette-primary_2;
+	aside.sidebar h2.widget-title {
+		border-bottom: 1px solid $palette-primary_2;
+		color: $text-contrast-palette-primary_3;
 	}
-	.navbar-default .navbar-nav .dropdown-menu {
-		background: $palette-primary_2;
-	}
-	.navbar-default .navbar-nav > .dropdown.active.open > a,
-	.navbar-default .navbar-nav > li.dropdown.active.open > a:hover,
-	.navbar-default .navbar-nav > li.dropdown.active.open > a:focus,
-	.navbar-default .navbar-nav > .dropdown.active.open > a:hover {
-		color: $text-contrast-palette-primary_2;
-	}
-
-	.navbar-default .navbar-nav > .open > a,
-	.navbar-default .navbar-nav > .open > a:hover,
-	.navbar-default .navbar-nav > .open > a:focus,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-		border-bottom: 4px solid transparent;
-		background: $palette-primary_2;
-		color: $text-contrast-palette-primary_2;
-	}
-
-	/* sm */
-	@media (min-width: 768px) {
-		/* Dropdown Child Default */
-		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-			color: $text-contrast-palette-primary_2;
-		}
+	.comment-respond a,
+	.comment-reply-title {
+		color: $text-contrast-palette-primary_3;
 	}
 
 	/*-----------------------------------------------
 	## 3
 	-----------------------------------------------*/
-	.entry-footer a,
-	.site-footer p,
-	.attribution-theme-mods,
-	.navbar-default .dropdown-menu > li > a,
-	#wp-calendar tbody td a,
-	.nav-next a,
-	.nav-previous a,
-	#secondary-menu a,
-	#tertiary-menu a,
-	#menu-social a {
+	.sidebar,
+	.panel-footer,
+	.widget ul#recentcomments > li {
+		background: $palette-primary_3;
+	}
+	.panel-body,
+	.panel-heading,
+	.media-heading,
+	.logged-in-as a,
+	.comments,
+	.comment-meta a,
+	.comments-title,
+	.comments-area .comment-content p {
+		background: $palette-primary_3;
 		color: $text-contrast-palette-primary_3;
 	}
-	.navbar-default .navbar-nav > .active > a,
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus,
-	#cancel-comment-reply-link:hover,
-	#cancel-comment-reply-link:focus,
-	.comment-reply-title a:hover,
-	.comment-reply-title a:focus,
-	.comment-meta a:hover,
-	.comment-meta a:focus,
-	#menu-social li a {
-		color: $palette-primary_3;
-	}
-	.navbar-default .navbar-toggle {
-		border-color: $palette-primary_3;
+	.entry-footer a,
+	.site-footer p,
+	#secondary-menu a,
+	#tertiary-menu a,
+	.attribution-theme-mods,
+	#wp-calendar tbody td a,
+	input.with-font[type="checkbox"] ~ label::before {
+		color: $text-contrast-palette-primary_3;
 	}
 	.site-footer {
 		background: $palette-primary_3;
 		color: $text-contrast-palette-primary_3;
 	}
 	.site-header {
-		background: $rgba_1;
+		background: $palette-primary_3;
 		border-bottom: 1px solid $text-contrast-palette-primary_3;
 	}
-	.navbar-default .navbar-toggle:hover,
-	.navbar-default .navbar-toggle:focus,
-	.entry-footer,
+	.site-title a,
+	.site-description {
+		color: $text-contrast-palette-primary_3;
+	}
 	header.smaller,
 	.palette-primary.disabled-footer .site-footer {
 		background: $palette-primary_3;
-	}
-	.nav-next,
-	.nav-previous {
-		background-color: $palette-primary_3;
-		border: 1px solid $palette-primary_2;
 	}
 	#wp-calendar tbody td {
 		background: $palette-primary_3;
 		border: 1px solid $palette-primary_1;
 		color: $text-contrast-palette-primary_3;
-	}	
+	} 
 
 	/* sm */
-		@media (min-width: 768px) {
-			/* Dropdown Child Default */
-			.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-				color: $text-contrast-palette-primary_3;
-			}
+	@media (min-width: 768px) {
+		.site-header {
+			background: $rgba_1;
+		}
+		/* Dropdown Child Default */
+		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+			color: $text-contrast-palette-primary_3;
+		}
 	}
 
 	/*-----------------------------------------------
 	## 4
 	-----------------------------------------------*/
-	.navbar-default .navbar-nav > li > a:focus,
-	.sidebar .nav > li > a:focus, 
-	.sidebar .nav > li > a:hover,
-	.widget ul#recentcomments > li > a:hover,
-	.widget ul#recentcomments > li > a:focus,
-	.widget ul#recentcomments > li > span > a:hover,
-	.widget ul#recentcomments > li > span > a:focus,
-	.tagcloud a:hover,
-	.tagcloud a:focus {
-		color: $palette-primary_4;
-	}
-	.nav-next a:hover,
-	.nav-next a:focus,
-	.nav-previous a:hover,
-	.nav-previous a:focus {
-		background: $palette-primary_4;
-		color: $text-contrast-palette-primary_4;
-
-	}
-	blockquote {
-		border-left: 5px solid $palette-primary_4;
-	}
 	td,
 	th {
 		border-bottom: 0.1rem solid $palette-primary_4;
@@ -265,26 +185,18 @@ $grad_1 : linear-gradient(to bottom, $palette-primary_4, $palette-primary_5);
 		border: 1px solid $palette-primary_3;
 		color: $text-contrast-palette-primary_4;
 	}
-	.navbar-default .navbar-nav > .current-menu-parent > a,
 	#wp-calendar tbody td:hover {
 		background: $palette-primary_4;
-		color: $text-contrast-palette-primary_4;
-	}
-	.navbar-default .navbar-nav > .dropdown.active.open > a {
 		color: $text-contrast-palette-primary_4;
 	}
 
 	/*-----------------------------------------------
 	## 5
 	-----------------------------------------------*/
-	aside.sidebar h2.widget-title {
-		border-bottom: 1px solid $palette-primary_2;
-		color: $palette-primary_5;
-	}
 	.boldgrid-gradient-bg-1 {
 		background-image: $grad_1;
 		color: $text-contrast-palette-primary_5;
-	}	
+	} 
 
 	/*-----------------------------------------------
 	## Neutral
@@ -296,53 +208,196 @@ $grad_1 : linear-gradient(to bottom, $palette-primary_4, $palette-primary_5);
 		border-top: 3px solid $palette-primary-neutral-color;
 		border-bottom: 3px solid $palette-primary-neutral-color;
 	}
-	.navbar-default .navbar-nav > li > a,
-	.navbar-default .navbar-text,
-	.call-to-action h4,
-	.site-title a,
-	.site-description {	
-		color: $palette-primary-neutral-color;
+	.well,
+	.navbar-default .navbar-text {
+		background: $palette-primary-neutral-color;
+		border: $palette-primary-neutral-color;
+		color: $text-contrast-palette-primary-neutral-color;
 	}
+	.widget.well a {
+		color: $text-contrast-palette-primary-neutral-color;
+	}
+	.entry-footer {
+		background: $palette-primary-neutral-color;
+		color: $text-contrast-palette-primary-neutral-color;
+	}
+
+	/*-----------------------------------------------
+	## Woocommerce
+	-----------------------------------------------*/
+	.total,
+	.mini_cart_item > span {
+		color: $palette-primary_2;
+	}
+	.panel {
+		background: $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}
+	#reviews #comments ol.commentlist li .meta {
+		color: $text-contrast-palette-primary_2;
+	}
+	#reviews #comments ol.commentlist li .comment-text {
+		border: 1px solid $text-contrast-palette-primary_2;
+	}
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:focus,
+	.nav-tabs > li.active > a:hover {
+		border: 1px solid $palette-primary_2;
+	}
+	.woocommerce-MyAccount-navigation-link a {
+		color: $text-contrast-palette-primary-neutral-color;
+	}
+	mark {
+		background: $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
+	}
+	&.woocommerce span.price.color1-color {
+		color: $palette-primary_2 !important;
+	}
+	&.woocommerce .color2-background-color {
+		background-color: $palette-primary_1 !important;
+	}
+	&.woocommerce .color-2-text-contrast {
+		color: $text-contrast-palette-primary_1 !important;
+	}
+	&.woocommerce .star-rating::before {
+		color: $palette-primary_1;
+	}
+	&.woocommerce .pagination > .active > span.color1-background-color {
+		background-color: $palette-primary_2 !important;
+	}
+	&.woocommerce .pagination > .active > span.color-1-text-contrast {
+		color: $text-contrast-palette-primary_2 !important;
+	}
+	&.woocommerce div.product p.stock {
+		color: $palette-primary_2;
+	}
+
+	/*-----------------------------------------------
+	## Buttons
+	-----------------------------------------------*/
+	.button-primary {
+		background: $palette-primary_1;
+		color: $text-contrast-palette-primary_1;
+	}
+	.button-primary:hover,
+	.button-primary:active {
+		background: $lighten1;
+		color: $text-contrast-palette-primary_1;
+	}
+	.button-secondary {
+		background: $palette-primary_2;
+		color: $text-contrast-palette-primary_2;
+	}
+	.button-secondary:hover,
+	.button-secondary:active {
+		background: $lighten2;
+		color: $text-contrast-palette-primary_2;
+	}
+
+	/*-----------------------------------------------
+	## Navigation Menu
+	-----------------------------------------------*/
+	.navbar-default .dropdown-menu > li > a {
+		color: $text-contrast-palette-primary_3;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: $palette-primary_3;
+	}
+	.navbar-default .navbar-toggle:hover,
+	.navbar-default .navbar-toggle:focus {
+		background: $palette-primary_3;
+	}
+	.navbar-default .navbar-nav > .dropdown.active.open > a {
+		color: $text-contrast-palette-primary_4;
+	}
+	.navbar-default .navbar-toggle .icon-bar,
+	.navbar-default .navbar-toggle:hover .icon-bar,
+	.navbar-default .navbar-toggle:focus .icon-bar {
+		background-color: $palette-primary_2;
+	}
+
+	/* xs */
+	.nav .open > a,
+	.nav .open > a:hover,
+	.nav .open > a:focus {
+		border-color: transparent;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: $text-contrast-palette-primary_2;
+	}
+	.navbar-default .navbar-nav .dropdown-menu {
+		background: $palette-primary_2;
+	}
+	.navbar-default .navbar-nav > .dropdown.active.open > a,
+	.navbar-default .navbar-nav > li.dropdown.active.open > a:hover,
+	.navbar-default .navbar-nav > li.dropdown.active.open > a:focus {
+		color: $palette-primary_2;
+	}
+	.navbar-default .navbar-nav > .open > a,
+	.navbar-default .navbar-nav > .open > a:hover,
+	.navbar-default .navbar-nav > .open > a:focus,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: $palette-primary_2;
+	}
+
 	.navbar-default .navbar-nav {
 		> {
 			.current-menu-parent > a {
 				color: $palette-primary_2;
 			}
 			.active > a {
-				color: $palette-primary_1;
+				color: $palette-primary_2;
 				background: none;
-				border-bottom: 4px solid $palette-primary-neutral-color;
-				&:hover, &:focus {
-					color: $palette-primary_1;
-					background: none;
-					border-bottom: 4px solid $palette-primary-neutral-color;
-				}
+					&:hover, &:focus {
+						color: $palette-primary_2;
+						background: none;
+					}
 			}
 			li > a {
 				color: $text-contrast-palette-primary_3;
-				&:hover, &:focus {
-					color: $palette-primary_1;
-					background: none;
-					border-bottom: 4px solid $palette-primary-neutral-color;
-				}
+					&:hover, &:focus {
+						color: $palette-primary_2;
+						background: none;
+					}
 			}
 		}
 		.dropdown .dropdown-menu > {
 			.active > a {
 				color: $text-contrast-palette-primary_2;
-				&:hover, &:focus {
-					background: $palette-primary_2;
-					color: $text-contrast-palette-primary_2;
-				}
+					&:hover, &:focus {
+						background: $palette-primary_2;
+						color: $text-contrast-palette-primary_2;
+					}
 			}
 			li > a {
 				color: $text-contrast-palette-primary_2;
 				border-bottom: 4px solid $palette-primary_2;
-				&:hover, &:focus {
-					background: $palette-primary_1;
-					color: $text-contrast-palette-primary_1;
-				}
+					&:hover, &:focus {
+						background: $palette-primary_1;
+						color: $text-contrast-palette-primary_1;
+					}
 			}
 		}
 	}
+
+	/* sm */
+	@media (min-width: 768px) {
+		/* Dropdown Child Default */
+		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+			color: $text-contrast-palette-primary_2;
+		}
+	}
+}
+
+.palette-primary.disabled-footer .site-footer {
+	background-color: $palette-primary-neutral-color;
+}
+.palette-primary.disabled-footer .site-footer #menu-social li a {
+	color: $text-contrast-palette-primary-neutral-color;
+}
+.palette-primary.disabled-footer .site-footer a {
+	color: $palette-primary_1;
 }

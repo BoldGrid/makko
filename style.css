@@ -1,8 +1,8 @@
 /*
 Theme Name: Makko
 Author: The BoldGrid Team
-Theme URI: http://www.boldgrid.com/makko
-Author URI: http://www.boldgrid.com/the-team
+Theme URI: https://www.boldgrid.com/themes/makko/
+Author URI: https://www.boldgrid.com/the-team/
 Description: Designed specifically for use with the BoldGrid suite of plugins, all BoldGrid themes are highly customizable, responsive to a wide range of devices, and of course, beautiful. Every BoldGrid theme includes five pre-selected color palettes and an advanced tool for creating your own unique palette. In addition, all themes feature multiple menu locations and widget areas, which are easily customizable to suit your needs. So if you're looking for a theme that looks great, feels modern and professional, and offers plenty of features to make it your own, you've chosen well.
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -24,12 +24,13 @@ Tags: custom-background, custom-colors, custom-menu, editor-style, responsive-la
 # Header
 # Navigation
 	## Main Menu
-	## Other Menus
 	## Social Menus
+	## Other Menus
 # Modules
 	## Global
 # Pages
 # Posts
+	## Widgets
 # Plugins
 	## WooCommerce
 # Footer
@@ -66,88 +67,79 @@ h6 {
 p {
 	margin-bottom: 15px;
 }
-.mod-divider p {
-	margin-top: -30px;
-}
 
 /*-----------------------------------------------
 ## Typography
 -----------------------------------------------*/
-a,
-a:hover,
-a:focus {
-	text-decoration: none;
-}
 a.url,
-.comment-reply-title a,
-.comment-meta a,
+.tagcloud a,
 .site-footer a,
 .entry-footer a,
 .entry-meta a,
 .entry-content a,
-.widget ul#recentcomments > li > a,
+.comment-meta a,
+.comment-reply-title a,
 #cancel-comment-reply-link,
-.tagcloud a  {
+.widget ul#recentcomments > li > a {
 	text-decoration: underline;
 }
+a,
+a:hover,
+a:focus,
 a.button-primary,
 a.button-secondary,
-.entry-footer a:hover,
-.entry-footer a:focus,
+.p-button-primary a,
+.p-button-secondary a,
+.navbar-nav > li > a,
+.tagcloud a:hover,
+.tagcloud a:focus
 .entry-meta a:hover,
 .entry-meta a:focus,
 .entry-title a:hover,
+.site-footer .widget.well a,
 .site-footer a:hover,
 .site-footer a:focus,
-#cancel-comment-reply-link:hover,
-#cancel-comment-reply-link:focus,
-.comment-reply-title a:hover,
-.comment-reply-title a:focus,
+.entry-footer a:hover,
+.entry-footer a:focus,
 .comment-meta a:hover,
 .comment-meta a:focus,
+.entry-content a:hover,
+.entry-content a:focus,
+.comment-reply-title a:hover,
+.comment-reply-title a:focus,
+#cancel-comment-reply-link:hover,
+#cancel-comment-reply-link:focus,
 .widget ul#recentcomments > li > a:hover,
 .widget ul#recentcomments > li > a:focus,
 .widget ul#recentcomments > li > span > a:hover,
-.widget ul#recentcomments > li > span > a:focus,
-.entry-content a:hover,
-.entry-content a:focus,
-.navbar-nav > li > a,
-.tagcloud a:hover,
-.tagcloud a:focus {
+.widget ul#recentcomments > li > span > a:focus {
 	text-decoration: none;
 }
-
 .cat-links a,
 .tags-links a {
 	line-height: 2;
 }
-/* .title-main {
-	font-weight: bold;
-} */
 
 /* xs */
 .entry-title,
 #secondary-menu,
 #tertiary-menu,
-.mod-divider p,
 .site-info,
 .attribution,
 .site-title,
 .site-description,
-.navbar-default .navbar-nav,
-.navbar-default .navbar-nav .open .dropdown-menu,
 .menu-social,
-/* .title-main, */
-.xs-center,
-.mod-img,
-.mod-img-circle,
 .p-button-primary,
-.p-button-secondary {
+.p-button-secondary,
+.navbar-default .navbar-nav,
+.navbar-default .navbar-nav .open .dropdown-menu {
 	text-align: center;
 }
 
 /* sm */
 @media (min-width: 768px) {
+	.site-title,
+	.site-description,
 	.navbar-default .navbar-nav,
 	.navbar-default .navbar-nav .open .dropdown-menu {
 		text-align: left;
@@ -159,39 +151,26 @@ a.button-secondary,
 
 /* md */
 @media (min-width: 992px) {
-	.site-title,
-	.site-description,
-	.xs-center,
-	.mod-img,
-	.mod-img-circle,
 	.p-button-primary,
 	.p-button-secondary {
 		text-align: left;
 	}
-	/* .title-main {
-		text-align: right;
-	} */
 }
 
 /*-----------------------------------------------
 ## Titles
 -----------------------------------------------*/
-.page-template-page_home .entry-title {
-	display: none;
-}
-/* .title-main {
-	margin: 0;
-	padding: 20px 0;
-} */
-.post-title-hidden .entry-meta {
-	margin-top: 50px;
-}
 .entry-title {
 	margin: 40px 0;
 }
 .entry-title a {
 	padding: 0 15px;
-	text-transform: lowercase;
+}
+.post-title-hidden .entry-meta {
+	margin-top: 50px;
+}
+.page-template-page_home .entry-title {
+	display: none;
 }
 
 /*-----------------------------------------------
@@ -203,11 +182,13 @@ a.button-secondary,
 	border-radius: 200px;
 	height: 50px;
 	line-height: 50px;
-	padding: 15px 40px;
 }
 .button-primary:hover,
 .button-primary:focus {
 	opacity: 0.8;
+}
+.post-password-form .button-primary {
+	padding: 0 40px;
 }
 
 /* Positioning */
@@ -230,10 +211,7 @@ a.button-secondary,
 	.button-secondary {
 		display: inline;
 		margin-top: 0;
-		transition: all 0.5s ease 0s;
-	}
-	.gridblock .p-button-secondary {
-		margin: 25px 0;
+		padding: 15px 40px;
 	}
 }
 
@@ -258,15 +236,125 @@ hr:after {
 	-ms-transform: rotate(-45deg); /* IE 9 */
 	-webkit-transform: rotate(-45deg); /* Safari and Chrome */
 }
-.panel {
-	background: transparent;
-	border: none;
-	box-shadow: none;
-}
-.panel-heading {
-	border-bottom: none;
+
+/*------------------------------------------------------------------------
+# Header
+------------------------------------------------------------------------*/
+.site-header {
+	position: static;
 }
 
+/* sm */
+@media (min-width: 768px) {
+	.site-header {
+		position: fixed;
+		width: 100%;
+		z-index: 9999;
+	}
+}
+
+/*-----------------------------------------------------------------------
+# Navigation
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Main Menu
+-----------------------------------------------*/
+.navbar {
+	border: none;
+	min-height: 0;
+}
+.navbar-default {
+	background: none;
+	margin-bottom: 0;
+}
+.navbar-default .navbar-nav {
+	margin-left: -15px;
+}
+.navbar-default .navbar-nav > li > a {
+	border-bottom: 4px solid transparent;
+	padding: 10px;
+}
+.navbar-default .navbar-nav {
+	padding-top: 25px;
+}
+.navbar-default .navbar-nav .dropdown-menu {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+/* Hover & Active */
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .current-menu-parent > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+	background: none;
+}
+
+/* sm */
+@media (min-width: 768px) {
+	.navbar-default {
+		float: right;
+	}
+}
+
+/*-----------------------------------------------
+## Social Menus
+-----------------------------------------------*/
+.menu-social li {
+	padding-right: 10px;
+}
+#menu-social li a {
+	-webkit-font-smoothing: antialiased;
+}
+.navbar-nav .menu-social {
+	margin-top: 0;
+}
+
+/*-----------------------------------------------
+## Other Menus
+-----------------------------------------------*/
+#secondary-menu a,
+#tertiary-menu a,
+#menu-social a {
+	padding: 0 5px;
+}
+.footer-center-menu {
+	padding: 1.1em 0;
+}
+.footer-center-items li::after,
+.boldgrid-framework-menu li::after {
+	content: "";
+}
+
+/*------------------------------------------------------------------------
+# Modules
+------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+## Global
+-----------------------------------------------*/
+blockquote {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+blockquote p{
+	padding-left: 15px;
+}
 dd {
 	margin-left: 4.2rem;
 	margin-bottom: 1.2rem;
@@ -281,8 +369,101 @@ ol li {
 code {
 	border-radius: 4px;
 }
+td,
+th {
+	padding: 1.2rem 1.5rem;
+}
+.table > thead > tr > th {
+	border-bottom: none;
+}
 
-/* Sidebar and Widgets */
+/*------------------------------------------------------------------------
+# Pages
+------------------------------------------------------------------------*/
+.jumbotron {
+	margin-bottom: 30px;
+}
+.jumbotron p {
+	margin-top: 30px;
+}
+
+/* 404 Page */
+.error404 .list-group-item {
+	background: transparent;
+	border: none;
+}
+
+/* Search Page */
+.search .jumbotron {
+	background: none;
+}
+.search-no-results .jumbotron,
+.search-no-results .container .jumbotron {
+	padding-left: 0;
+}
+
+/*------------------------------------------------------------------------
+# Posts
+------------------------------------------------------------------------*/
+.post h1.entry-title a {
+	padding: 0;
+}
+.post h1.entry-title {
+	text-align: left;
+}
+.panel {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+.panel-heading {
+	border-bottom: none;
+}
+
+/* Comments */
+.post {
+	padding-bottom: 25px;
+}
+#cancel-comment-reply-link {
+	float: right;
+}
+.comments-title {
+	margin: 0 0 50px;
+}
+.comments {
+	padding: 25px;
+	margin-top: 25px;
+}
+#commentsubmit {
+	padding: 0 40px;
+}
+.panel-footer {
+	padding: 0px 15px 25px;
+	border-top: none;
+}
+
+/* Post Navigation */
+.nav-next,
+.nav-previous {
+	margin-bottom: 25px;
+	padding: 8px 30px;
+	transition: all 0.5s ease 0s;
+}
+.nav-next a:hover,
+.nav-next a:focus,
+.nav-previous a:hover,
+.nav-previous a:focus {
+	text-decoration: underline;
+}
+
+/* Call to Action */
+.single .call-to-action {
+	display: none;
+}
+
+/*-----------------------------------------------
+## Widgets
+-----------------------------------------------*/
 .sidebar {
 	padding: 20px 12px;
 	margin-bottom: 25px;
@@ -291,7 +472,7 @@ aside.sidebar h2.widget-title {
 	padding-bottom: 10px;
 }
 .widget {
-    padding-bottom: 20px;
+	padding-bottom: 20px;
 }
 .widget ul#recentcomments > li.recentcomments {
 	padding: 8px 0 !important;
@@ -345,212 +526,6 @@ aside.sidebar h2.widget-title {
 .widget_calendar td, th {
 	border-bottom: none !important;
 }
-.table > thead > tr > th {
-	border-bottom: none;
-}
-td,
-th {
-	padding: 1.2rem 1.5rem;
-}
-
-/*------------------------------------------------------------------------
-# Header
-------------------------------------------------------------------------*/
-.site-header {
-	position: fixed;
-	width: 100%;
-	z-index: 9999;
-}
-
-/* Flexbox Navigation */
-.row.header-6.header-7 {
-	display: flex;
-}
-.col-md-6.header-7 {
-	align-self: flex-end;
-	flex-direction: row;
-}
-
-/* CTA */
-.call-to-action .p-button-primary {
-	display: block;
-	margin-top: 0;
-}
-
-/*-----------------------------------------------------------------------
-# Navigation
-------------------------------------------------------------------------*/
-
-/*-----------------------------------------------
-## Main Menu
------------------------------------------------*/
-.navbar {
-	border: none;
-	min-height: 0;
-}
-.navbar-default {
-	background: none;
-	margin-bottom: 0;
-}
-.navbar-default .navbar-nav {
-	margin-left: -15px;
-}
-.navbar-default .navbar-nav > li > a {
-	border-bottom: 4px solid transparent;
-	padding: 10px;
-}
-.navbar-default .navbar-nav {
-	padding-top: 25px;
-}
-.navbar-default .navbar-nav .dropdown-menu {
-	border: none;
-	border-radius: 0;
-	box-shadow: none;
-}
-
-/* Hover & Active */
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus,
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus,
-.navbar-default .navbar-nav > .current-menu-parent > a,
-.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
-.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-	background: none;
-}
-
-/* sm */
-@media (min-width: 768px) {
-	.navbar-default {
-		float: right;
-	}
-}
-
-/*-----------------------------------------------
-## Other Menus
------------------------------------------------*/
-#secondary-menu a,
-#tertiary-menu a,
-#menu-social a {
-	padding: 0 5px;
-}
-.footer-center-menu {
-	padding: 1.1em 0;
-}
-.footer-center-items li::after,
-.boldgrid-framework-menu li::after {
-	content: "";
-}
-
-/*-----------------------------------------------
-## Social Menus
------------------------------------------------*/
-.menu-social li {
-	padding-right: 10px;
-}
-#menu-social li a {
-	-webkit-font-smoothing: antialiased;
-}
-.navbar-nav .menu-social {
-	margin-top: 0;
-}
-
-/*------------------------------------------------------------------------
-# Modules
-------------------------------------------------------------------------*/
-
-/*-----------------------------------------------
-## Global
------------------------------------------------*/
-blockquote,
-.mod-blockquote {
-	padding-bottom: 0;
-	padding-top: 0;
-}
-blockquote p,
-.mod-blockquote p {
-	padding-left: 15px;
-}
-
-/*------------------------------------------------------------------------
-# Pages
-------------------------------------------------------------------------*/
-.jumbotron {
-	margin-bottom: 30px;
-}
-.jumbotron p {
-	margin-top: 30px;
-}
-
-/* 404 Page */
-.error404 .list-group-item {
-	background: transparent;
-	border: none;
-}
-
-/* Search Page */
-.search .jumbotron {
-	background: none;
-}
-.search-no-results .jumbotron,
-.search-no-results .container .jumbotron {
-	padding-left: 0;
-}
-
-/*------------------------------------------------------------------------
-# Posts
-------------------------------------------------------------------------*/
-.post h1.entry-title a {
-	padding: 0;
-}
-.post h1.entry-title {
-	text-align: left;
-}
-
-/* Comments */
-.post {
-	padding-bottom: 25px;
-}
-.panel-footer {
-	padding: 20px 15px;
-}
-#cancel-comment-reply-link {
-	float: right;
-}
-.comments-title {
-	margin: 0 0 50px;
-}
-.comments {
-	padding: 25px;
-	margin-top: 25px;
-}
-.panel-footer {
-	padding: 0px 15px 25px;
-	border-top: none;
-}
-
-/* Post Navigation */
-.nav-next,
-.nav-previous {
-	margin-bottom: 25px;
-	padding: 8px 30px;
-	transition: all 0.5s ease 0s;
-}
-
-/* Call to Action */
-.single .call-to-action {
-	display: none;
-}
 
 /*------------------------------------------------------------------------
 # Plugins
@@ -561,6 +536,22 @@ blockquote p,
 -----------------------------------------------*/
 .woocommerce .page-title {
 	margin: 0;
+}
+.woocommerce div.product .woocommerce-tabs .panel {
+	padding: 20px;
+}
+.nav-tabs {
+	border: none;
+}
+.woocommerce div.product .product_title {
+	text-align: left;
+}
+.sidebar .woocommerce li > a {
+	text-decoration: underline;
+}
+.sidebar .woocommerce li > a:focus,
+.sidebar .woocommerce li > a:hover {
+	text-decoration: none;
 }
 
 /*------------------------------------------------------------------------
@@ -576,16 +567,6 @@ blockquote p,
 .entry-footer {
 	padding: 15px;
 }
-.site-footer p,
-.attribution-theme-mods {
-	font-size: 14px;
-}
-.entry-footer i.fa {
-	font-size: 18px;
-}
 .site-footer .social-menu {
 	float: right;
-}
-footer aside.widget {
-	padding-bottom: 0 !important;
 }
